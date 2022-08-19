@@ -3,8 +3,8 @@
 var p; // shortcut to reference prototypes
 var lib={};var ss={};var img={};
 lib.ssMetadata = [
-		{name:"index_atlas_1", frames: [[0,0,1920,1200]]},
-		{name:"index_atlas_2", frames: [[1606,374,209,185],[1026,0,578,692],[1606,0,289,372],[0,0,1024,1024]]}
+		{name:"index_atlas_1", frames: [[1606,374,209,185],[1026,0,578,692],[1606,0,289,372],[0,0,1024,1024]]},
+		{name:"index_atlas_2", frames: [[0,0,1920,1200]]}
 ];
 
 
@@ -29,35 +29,35 @@ lib.ssMetadata = [
 
 
 (lib.CachedBmp_2 = function() {
-	this.initialize(ss["index_atlas_2"]);
+	this.initialize(ss["index_atlas_1"]);
 	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.CachedBmp_1 = function() {
-	this.initialize(ss["index_atlas_2"]);
+	this.initialize(ss["index_atlas_1"]);
 	this.gotoAndStop(1);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.bolt_1 = function() {
-	this.initialize(ss["index_atlas_2"]);
+	this.initialize(ss["index_atlas_1"]);
 	this.gotoAndStop(2);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.cloud_1 = function() {
-	this.initialize(ss["index_atlas_2"]);
+	this.initialize(ss["index_atlas_1"]);
 	this.gotoAndStop(3);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.map_1 = function() {
-	this.initialize(ss["index_atlas_1"]);
+	this.initialize(ss["index_atlas_2"]);
 	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
 // helper functions:
@@ -144,6 +144,38 @@ if (reversed == null) { reversed = false; }
 	this._renderFirstFrame();
 
 }).prototype = getMCSymbolPrototype(lib.path, new cjs.Rectangle(-4,-4,1800.4,396.6), null);
+
+
+(lib.FS = function(mode,startPosition,loop,reversed) {
+if (loop == null) { loop = true; }
+if (reversed == null) { reversed = false; }
+	var props = new Object();
+	props.mode = mode;
+	props.startPosition = startPosition;
+	props.labels = {};
+	props.loop = loop;
+	props.reversed = reversed;
+	cjs.MovieClip.apply(this,[props]);
+
+	// Layer_1
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f().s("#0099FF").ss(6,1,1).p("AnznzIPnAAIAAPnIvnAAg");
+	this.shape.setTransform(50,50);
+
+	this.shape_1 = new cjs.Shape();
+	this.shape_1.graphics.f().s("#0099FF").ss(4,1,1).p("AlnlkIDfBAAlnlkID+D+Akqh8Ig9joAlkFlID+j9AlkFlIDfg/AknB+Ig9DnACAkpIDog9Ig/DfAB9ErIDoA8IhAjfAFlFnIj+j9AFolmIj+D9");
+	this.shape_1.setTransform(49.75,49.95);
+
+	this.shape_2 = new cjs.Shape();
+	this.shape_2.graphics.f("#FFFFFF").s().p("AnzH0IAAvnIPnAAIAAPngAFiFnIg/jgIA/DgIj+j9ID+D9Ijng9IDnA9gAlmFlIDfhAIjfBAID9j+Ij9D+IA9joIg9DogAhshnIj9j+IDfBAIjfhAIA9DoIg9jogABohqID9j9Ig/DgIA/jgIjoA9IDog9gAFiFngAlmFlg");
+	this.shape_2.setTransform(50,50);
+
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_2},{t:this.shape_1},{t:this.shape}]}).wait(1));
+
+	this._renderFirstFrame();
+
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = new cjs.Rectangle(-3,-3,106,106);
 
 
 (lib.cloud_1_1 = function(mode,startPosition,loop,reversed) {
@@ -314,6 +346,44 @@ if (reversed == null) { reversed = false; }
 	props.loop = loop;
 	props.reversed = reversed;
 	cjs.MovieClip.apply(this,[props]);
+
+	this.actionFrames = [0];
+	// timeline functions:
+	this.frame_0 = function() {
+		var _this = this;
+		_this.FSbtn.addEventListener("click", doFullscreen);
+		
+		function doFullscreen() {
+		    
+			_this.FSbtn.visible = false;
+			_this.FSbtn.mouseEnabled = false;
+			
+			var i;
+		    var elem = document.getElementById("animation_container");
+		    var fs = ["requestFullscreen", "webkitRequestFullscreen", "mozRequestFullScreen", "msRequestFullscreen"];
+		
+		    for (i = 0; i < 4; i++) 
+			{
+		        if (elem[fs[i]]) 
+				{
+		            elem[fs[i]]();
+		            break;
+		        }
+		    }
+		
+		}
+	}
+
+	// actions tween:
+	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(960));
+
+	// actions
+	this.FSbtn = new lib.FS();
+	this.FSbtn.name = "FSbtn";
+	this.FSbtn.setTransform(75.6,293.2,0.5,0.5,0,0,0,50,50.1);
+	new cjs.ButtonHelper(this.FSbtn, 0, 1, 1);
+
+	this.timeline.addTween(cjs.Tween.get(this.FSbtn).wait(960));
 
 	// storm
 	this.instance = new lib.storm();
