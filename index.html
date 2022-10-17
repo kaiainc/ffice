@@ -29,7 +29,7 @@ function init() {
 	canvas = document.getElementById("canvas");
 	anim_container = document.getElementById("animation_container");
 	dom_overlay_container = document.getElementById("dom_overlay_container");
-	var comp=AdobeAn.getComposition("32E91FA9E50D334DB59FFB798AF48E01");
+	var comp=AdobeAn.getComposition("8667A83863847241B67D53F1741D7F20");
 	var lib=comp.getLibrary();
 	createjs.MotionGuidePlugin.install();
 	var loader = new createjs.LoadQueue(false);
@@ -54,8 +54,8 @@ function handleComplete(evt,comp) {
 	}
 	var preloaderDiv = document.getElementById("_preload_div_");
 	preloaderDiv.style.display = 'none';
-	canvas.style.display = 'block';
-	exportRoot = new lib.ffice_newui_noVO_v2();
+	dom_overlay_container.style.display = canvas.style.display = 'block';
+	exportRoot = new lib.MRTBO_interactive_v1a();
 	stage = new lib.Stage(canvas);
 	stage.enableMouseOver();	
 	//Registers the "tick" event listener.
@@ -75,8 +75,8 @@ function playSound(id, loop, offset) {
 <!-- write your code here -->
 </head>
 <body onload="init();" style="margin:0px;">
-	<div id="animation_container" style="background-color:rgba(255, 255, 255, 1.00); width:1920px; height:1200px">
-		<canvas id="canvas" width="1920" height="1200" style="position: absolute; display: none; background-color:rgba(255, 255, 255, 1.00);"></canvas>
+	<div id="animation_container" style="background-color:rgba(255, 255, 255, 0.00); width:1920px; height:1200px">
+		<canvas id="canvas" width="1920" height="1200" style="position: absolute; display: none; background-color:rgba(255, 255, 255, 0.00);"></canvas>
 		<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:1920px; height:1200px; position: absolute; left: 0px; top: 0px; display: none;">
 		</div>
 	</div>
