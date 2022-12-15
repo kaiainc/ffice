@@ -1,0 +1,43 @@
+﻿{"frames": {
+
+"CachedBmp_98":
+{
+	"frame": {"x":0,"y":0,"w":413,"h":86},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":413,"h":86},
+	"sourceSize": {"w":413,"h":86}
+},
+"SRR_btn":
+{
+	"frame": {"x":0,"y":200,"w":304,"h":110},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":304,"h":110},
+	"sourceSize": {"w":304,"h":110}
+},
+"STR_btn":
+{
+	"frame": {"x":0,"y":312,"w":304,"h":110},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":304,"h":110},
+	"sourceSize": {"w":304,"h":110}
+},
+"return_btn":
+{
+	"frame": {"x":0,"y":88,"w":304,"h":110},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":304,"h":110},
+	"sourceSize": {"w":304,"h":110}
+}},
+"meta": {
+	"app": "Adobe Animate",
+	"version": "22.0.8.217",
+	"image": "ffice_v5a_atlas_19.png",
+	"format": "undefined",
+	"size": {"w":512,"h":512},
+	"scale": "1"
+}
+}

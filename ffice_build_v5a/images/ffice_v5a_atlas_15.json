@@ -1,0 +1,43 @@
+﻿{"frames": {
+
+"CachedBmp_168":
+{
+	"frame": {"x":132,"y":188,"w":350,"h":105},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":350,"h":105},
+	"sourceSize": {"w":350,"h":105}
+},
+"CachedBmp_171":
+{
+	"frame": {"x":0,"y":321,"w":412,"h":99},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":412,"h":99},
+	"sourceSize": {"w":412,"h":99}
+},
+"CachedBmp_39":
+{
+	"frame": {"x":0,"y":0,"w":130,"h":319},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":130,"h":319},
+	"sourceSize": {"w":130,"h":319}
+},
+"Volcano_BG_V_Clouds_02":
+{
+	"frame": {"x":132,"y":0,"w":205,"h":186},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":205,"h":186},
+	"sourceSize": {"w":205,"h":186}
+}},
+"meta": {
+	"app": "Adobe Animate",
+	"version": "22.0.8.217",
+	"image": "ffice_v5a_atlas_15.png",
+	"format": "undefined",
+	"size": {"w":512,"h":512},
+	"scale": "1"
+}
+}
